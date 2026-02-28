@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipino Canvas - Gallery</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Filipino Canvas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="banner">
+    <h1>Filipino Art Gallery</h1>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Famous Filipino Paintings</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow">
+            <img src="A1.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Planting Rice</h5>
+              <p class="card-text">Fernando Amorsolo (1921)</p>
+              <button class="btn btn-custom" onclick="showInfo(1)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow">
+            <img src="A2.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Spoliarium</h5>
+              <p class="card-text">Juan Luna (1884)</p>
+              <button class="btn btn-custom" onclick="showInfo(2)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow">
+            <img src="A3.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">The Blood Compact</h5>
+              <p class="card-text">Juan Luna (1886)</p>
+              <button class="btn btn-custom" onclick="showInfo(3)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow">
+            <img src="A4.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Las Virgenes Cristianas Expuestas al Populacho</h5>
+              <p class="card-text">Félix Resurrección Hidalgo (1884)</p>
+              <button class="btn btn-custom" onclick="showInfo(4)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow">
+            <img src="A5.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">La Laguna Estigia</h5>
+              <p class="card-text">Félix Resurrección Hidalgo (1887)</p>
+              <button class="btn btn-custom" onclick="showInfo(5)">View Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const paintings = {
+      1: {
+        title: "Planting Rice",
+        desc: "Created in the 1930s, this painting by Fernando Amorsolo shows Filipino farmers working in golden rice fields, capturing the warmth of sunlight and the beauty of rural life."
+      
+      },
+      2: {
+        title: "Spoliarium",
+        desc: "Created in 1884 by Juan Luna, Spoliarium depicts fallen Roman gladiators dragged away from the arena. It symbolizes the suffering of Filipinos under Spanish colonization and became a powerful representation of nationalism."
+      },
+      3: {
+        title: "The Blood Compact",
+        desc: "Painted in 1886 by Juan Luna, this artwork shows the historic pact between Datu Sikatuna and Miguel López de Legazpi in 1565, symbolizing friendship and diplomacy between Filipinos and Spaniards."
+      },
+      4: {
+        title: "Las Virgenes Cristianas Expuestas al Populacho",
+        desc: "Completed in 1884 by Félix Resurrección Hidalgo, this painting portrays Christian maidens exposed to a hostile Roman crowd. It symbolizes injustice, suffering, and moral strength."
+      },
+      5: {
+        title: "La Laguna Estigia",
+        desc: "Painted in 1887 by Félix Resurrección Hidalgo, this artwork represents the River Styx from Greek mythology, symbolizing death, transition, and the journey of the soul."
+      }
+    };
+
+    function showInfo(id) {
+      document.getElementById("modalTitle").innerText = paintings[id].title;
+      document.getElementById("modalBody").innerText = paintings[id].desc;
+
+      let modal = new bootstrap.Modal(document.getElementById('infoModal'));
+      modal.show();
+    }
+  </script>
+
+</body>
+
+</html>

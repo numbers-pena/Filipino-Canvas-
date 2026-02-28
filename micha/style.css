@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #7a0c0c;
+  }
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  position: relative;
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FbPXfUmP40qfD63Qqc0K_ew%252FTurner-deluge.jpg&width=1200');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.banner h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #f4f4f4;
+}
+
+.filipino-art {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.filipino-art h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.filipino-art p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.btn-custom {
+  background-color: #7a0c0c;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background-color: #5c0909;
+  color: white;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+ h1, h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #65100A;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #F15448;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+}
